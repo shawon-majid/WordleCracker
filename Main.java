@@ -26,8 +26,14 @@ public class Main {
 
 			System.out.println("Suggested Word: " + suggestedWord); // suggests word from eligible list
 
-			System.out.println("How Many yellows you got?");
+			System.out.println("How Many yellows you got? (enter -1 if the word is not in the list)");
 			int yellows = in.nextInt();
+
+			if(yellows == -1){
+				eligibleList.remove(suggestedWord);
+				continue;
+			}
+
 			if(yellows >= 1) System.out.print("Enter the indices: ");
 			ArrayList <Integer> yellowIndex = p.getIndices(yellows);
 			System.out.println("How Many greens you got?");
@@ -48,6 +54,10 @@ public class Main {
 			lc.updateList(yellowIndex, greenIndex, colorless, suggestedWord);
 			
 			eligibleList = lc.getList();
+
+			// if(eligibleList.size() <= 20){
+			// 	System.out.println(eligibleList);
+			// }
 
 		}
 
