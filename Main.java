@@ -16,7 +16,7 @@ public class Main {
 		ArrayList <String> eligibleList = lc.getList();
 
 
-		for(int i = 0; i < 6; i++){
+		for(int i = 0; i < 100; i++){
 
 			String suggestedWord = p.suggestedWord(eligibleList);
 
@@ -24,7 +24,13 @@ public class Main {
 				break;
 			}
 
+			// if(eligibleList.size() <= 30){
+			// 	System.out.println(eligibleList);
+			// }
+
 			System.out.println("Suggested Word: " + suggestedWord); // suggests word from eligible list
+
+
 
 			System.out.println("How Many yellows you got? (enter -1 if the word is not in the list)");
 			int yellows = in.nextInt();
@@ -55,9 +61,7 @@ public class Main {
 			
 			eligibleList = lc.getList();
 
-			// if(eligibleList.size() <= 20){
-			// 	System.out.println(eligibleList);
-			// }
+			
 
 		}
 
