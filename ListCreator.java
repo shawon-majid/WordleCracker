@@ -11,7 +11,7 @@ public class ListCreator {
 	public ListCreator() throws Exception{
 		eligibleList = new ArrayList <String>();
 
-		FileInputStream fstream = new FileInputStream("fiveLetterWords.txt");
+		FileInputStream fstream = new FileInputStream("sortedFiveLetter.txt");
 		BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
 
 		String currentWord;
